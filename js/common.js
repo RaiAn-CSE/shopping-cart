@@ -1,3 +1,20 @@
+function updateCaseNumber(caseNumberFieldId, isIncrease) {
+    const caseNumberField = document.getElementById(caseNumberFieldId);
+    const caseNumberString = caseNumberField.value;
+    const previousCaseNumber = parseInt(caseNumberString);
+
+    let newCaseNumber;
+    if (isIncrease === true) {
+        newCaseNumber = previousCaseNumber + 1;
+    }
+    else {
+        newCaseNumber = previousCaseNumber - 1;
+    }
+    caseNumberField.value = newCaseNumber;
+    return newCaseNumber;
+};
+
+
 function getTextElementValueById(elementId) {
     // calculate total 
     const phoneTotalElement = document.getElementById(elementId);
